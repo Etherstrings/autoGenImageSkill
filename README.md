@@ -46,6 +46,12 @@ GPT-Image-2 · Responses API · SSE 解码 · 文生图 · 图生图
 gpt-image-relay/
 ```
 
+ClawHub / OpenClaw 页面：
+
+```text
+https://clawhub.ai/Etherstrings/gpt-image-relay
+```
+
 Hermes / GitHub skill 源：
 
 ```text

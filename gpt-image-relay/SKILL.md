@@ -17,6 +17,11 @@ Use this OpenClaw skill to generate PNG images with the local `gpt_image` relay 
 
 The main script is [scripts/gpt_image_cli.js](scripts/gpt_image_cli.js). Run it with Node 18+. In OpenClaw, reference it as `{baseDir}/scripts/gpt_image_cli.js` so the command works wherever the skill folder is located.
 
+External pages:
+
+- ClawHub / OpenClaw: `https://clawhub.ai/Etherstrings/gpt-image-relay`
+- Hermes Agent GitHub skill source: `https://github.com/Etherstrings/autoGenImageSkill/tree/main/gpt-image-relay`
+
 ## Access Choice
 
 1. Use `official` when the user provides an official OpenAI permission code/API key or explicitly wants the official API path.
