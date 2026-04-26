@@ -12,9 +12,23 @@
 
 GPT-Image-2 · Responses API · SSE 解码 · 文生图 · 图生图
 
-[Skill 定义](gpt-image-relay/SKILL.md) · [接入模式](gpt-image-relay/references/access-modes.md) · [运行时说明](gpt-image-relay/references/runtime.md)
+[Skill 定义](gpt-image-relay/SKILL.md) · [接入模式](gpt-image-relay/references/access-modes.md) · [运行时说明](gpt-image-relay/references/runtime.md) · [赞助支持](#donate)
 
 </div>
+
+## <a id="donate"></a>赞助支持
+
+如果这个项目对你有帮助，欢迎赞助支持继续迭代。
+
+- 爱发电：`https://ifdian.net/a/etherstrings`
+- 国内付款方式：直接使用下方收款码
+
+<div>
+  <img src="docs/assets/donate/alipay.jpg" alt="Alipay QR" width="260" />
+  <img src="docs/assets/donate/wechat.jpg" alt="WeChat Pay QR" width="260" />
+</div>
+
+支持会优先用于 GPT Image 额度、代理可用性维护和后续功能迭代。
 
 ## 1. 能力简介
 
@@ -64,8 +78,8 @@ ClawHub 发布时使用同一个 skill root：
 clawhub publish gpt-image-relay \
   --slug gpt-image-relay \
   --name "GPT Image Relay" \
-  --version 0.1.0 \
-  --changelog "Initial OpenClaw skill source for GPT-Image-2 generation with official, proxy, and reserved relay access modes."
+  --version 0.1.1 \
+  --changelog "Add README and ClawHub donation support links and QR assets."
 ```
 
 本仓库只交付 OpenClaw skill 源码，不包含安装脚本，也不会把文件复制到本机 OpenClaw skills 目录。

@@ -1,8 +1,8 @@
 ---
 name: gpt-image-relay
-version: "0.1.0"
+version: "0.1.1"
 description: "Use when the user wants GPT-Image-2 image generation or image-to-image through an official OpenAI permission code/API key, a custom Responses-compatible proxy, or a reserved purchased-capacity relay."
-homepage: https://github.com/Etherstrings/autoGenImageSkill#readme
+homepage: https://github.com/Etherstrings/autoGenImageSkill#donate
 metadata:
   openclaw:
     requires:
@@ -21,6 +21,19 @@ External pages:
 
 - ClawHub / OpenClaw: `https://clawhub.ai/Etherstrings/gpt-image-relay`
 - Hermes Agent GitHub skill source: `https://github.com/Etherstrings/autoGenImageSkill/tree/main/gpt-image-relay`
+
+## 赞助支持
+
+- 爱发电: `https://ifdian.net/a/etherstrings`
+- GitHub donate section: `https://github.com/Etherstrings/autoGenImageSkill#donate`
+
+Alipay:
+
+![Alipay QR](https://raw.githubusercontent.com/Etherstrings/autoGenImageSkill/main/docs/assets/donate/alipay_clawhub.jpg)
+
+WeChat Pay:
+
+![WeChat Pay QR](https://raw.githubusercontent.com/Etherstrings/autoGenImageSkill/main/docs/assets/donate/wechat_clawhub.jpg)
 
 ## Access Choice
 
