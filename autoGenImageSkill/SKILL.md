@@ -1,6 +1,6 @@
 ---
-name: gpt-image-relay
-version: "0.1.1"
+name: autoGenImageSkill
+version: "0.1.2"
 description: "Use when the user wants GPT-Image-2 image generation or image-to-image through an official OpenAI permission code/API key, a custom Responses-compatible proxy, or a reserved purchased-capacity relay."
 homepage: https://github.com/Etherstrings/autoGenImageSkill#donate
 metadata:
@@ -9,7 +9,7 @@ metadata:
       bins: ["node"]
 ---
 
-# GPT Image Relay
+# autoGenImageSkill
 
 ## Overview
 
@@ -19,8 +19,8 @@ The main script is [scripts/gpt_image_cli.js](scripts/gpt_image_cli.js). Run it 
 
 External pages:
 
-- ClawHub / OpenClaw: `https://clawhub.ai/Etherstrings/gpt-image-relay`
-- Hermes Agent GitHub skill source: `https://github.com/Etherstrings/autoGenImageSkill/tree/main/gpt-image-relay`
+- ClawHub / OpenClaw: `https://clawhub.ai/Etherstrings/autogenimageskill`
+- Hermes Agent GitHub skill source: `https://github.com/Etherstrings/autoGenImageSkill/tree/main/autoGenImageSkill`
 
 ## 赞助支持
 

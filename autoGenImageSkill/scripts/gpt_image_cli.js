@@ -13,7 +13,7 @@ const DEFAULT_OUTPUT_FORMAT = 'png';
 const DEFAULT_DIRECT_RETRIES = 3;
 const DEFAULT_TIMEOUT_MS = 180000;
 const DEFAULT_POLL_INTERVAL_MS = 1500;
-const DEFAULT_STATE_PATH = path.join(os.homedir(), '.openclaw', 'gpt-image-relay', 'state.json');
+const DEFAULT_STATE_PATH = path.join(os.homedir(), '.openclaw', 'autoGenImageSkill', 'state.json');
 
 function parseArgs(argv) {
   const args = { _: [] };
@@ -47,7 +47,7 @@ function parseArgs(argv) {
 }
 
 function help() {
-  return `GPT Image Relay CLI
+  return `autoGenImageSkill CLI
 
 Usage:
   node gpt_image_cli.js generate --mode official --permission-code "$OPENAI_API_KEY" --prompt "..." --output out.png

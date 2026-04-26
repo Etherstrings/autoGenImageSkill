@@ -44,7 +44,7 @@ The reference `tonghuashun-ifind-skill` uses a GitHub repo whose actual skill ro
 - `scripts/*`
 - `references/*`
 
-OpenClaw and ClawHub expect a skill folder with `SKILL.md` plus optional supporting text files. This project follows that source shape: the publishable skill root is `gpt-image-relay/`. Keep this repository as generated source unless the user explicitly asks for an installation step later.
+OpenClaw and ClawHub expect a skill folder with `SKILL.md` plus optional supporting text files. This project follows that source shape: the publishable skill root is `autoGenImageSkill/`. Keep this repository as generated source unless the user explicitly asks for an installation step later.
 
 The `SKILL.md` frontmatter includes:
 

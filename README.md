@@ -12,7 +12,7 @@
 
 GPT-Image-2 · Responses API · SSE 解码 · 文生图 · 图生图
 
-[Skill 定义](gpt-image-relay/SKILL.md) · [接入模式](gpt-image-relay/references/access-modes.md) · [运行时说明](gpt-image-relay/references/runtime.md) · [赞助支持](#donate)
+[Skill 定义](autoGenImageSkill/SKILL.md) · [接入模式](autoGenImageSkill/references/access-modes.md) · [运行时说明](autoGenImageSkill/references/runtime.md) · [赞助支持](#donate)
 
 </div>
 
@@ -32,7 +32,7 @@ GPT-Image-2 · Responses API · SSE 解码 · 文生图 · 图生图
 
 ## 1. 能力简介
 
-`gpt-image-relay` 是一个面向 OpenClaw、Hermes Agent 和其它终端 Agent 的 GPT Image 生图 skill。
+`autoGenImageSkill` 是一个面向 OpenClaw、Hermes Agent 和其它终端 Agent 的 GPT Image 生图 skill。
 
 目标很直接：
 
@@ -57,29 +57,29 @@ GPT-Image-2 · Responses API · SSE 解码 · 文生图 · 图生图
 当前 publishable skill root：
 
 ```text
-gpt-image-relay/
+autoGenImageSkill/
 ```
 
 ClawHub / OpenClaw 页面：
 
 ```text
-https://clawhub.ai/Etherstrings/gpt-image-relay
+https://clawhub.ai/Etherstrings/autogenimageskill
 ```
 
 Hermes / GitHub skill 源：
 
 ```text
-https://github.com/Etherstrings/autoGenImageSkill/tree/main/gpt-image-relay
+https://github.com/Etherstrings/autoGenImageSkill/tree/main/autoGenImageSkill
 ```
 
 ClawHub 发布时使用同一个 skill root：
 
 ```bash
-clawhub publish gpt-image-relay \
-  --slug gpt-image-relay \
-  --name "GPT Image Relay" \
-  --version 0.1.1 \
-  --changelog "Add README and ClawHub donation support links and QR assets."
+clawhub publish autoGenImageSkill \
+  --slug autogenimageskill \
+  --name "autoGenImageSkill" \
+  --version 0.1.2 \
+  --changelog "Rename the OpenClaw skill display and source root to autoGenImageSkill."
 ```
 
 本仓库只交付 OpenClaw skill 源码，不包含安装脚本，也不会把文件复制到本机 OpenClaw skills 目录。
@@ -89,15 +89,15 @@ clawhub publish gpt-image-relay \
 主入口是：
 
 ```bash
-node gpt-image-relay/scripts/gpt_image_cli.js generate
+node autoGenImageSkill/scripts/gpt_image_cli.js generate
 ```
 
 辅助入口：
 
 ```bash
-node gpt-image-relay/scripts/gpt_image_cli.js session
-node gpt-image-relay/scripts/gpt_image_cli.js redeem
-node gpt-image-relay/scripts/gpt_image_cli.js quota
+node autoGenImageSkill/scripts/gpt_image_cli.js session
+node autoGenImageSkill/scripts/gpt_image_cli.js redeem
+node autoGenImageSkill/scripts/gpt_image_cli.js quota
 ```
 
 OpenClaw 运行 skill 时，`SKILL.md` 内使用 `{baseDir}/scripts/gpt_image_cli.js`，避免路径依赖当前工作目录。
@@ -107,7 +107,7 @@ OpenClaw 运行 skill 时，`SKILL.md` 内使用 `{baseDir}/scripts/gpt_image_cl
 ### 4.1 官方权限码
 
 ```bash
-node gpt-image-relay/scripts/gpt_image_cli.js generate \
+node autoGenImageSkill/scripts/gpt_image_cli.js generate \
   --mode official \
   --permission-code "$OPENAI_API_KEY" \
   --prompt "一张电影感的雨夜赛博城市街景" \
@@ -117,7 +117,7 @@ node gpt-image-relay/scripts/gpt_image_cli.js generate \
 ### 4.2 自定义代理参数
 
 ```bash
-node gpt-image-relay/scripts/gpt_image_cli.js generate \
+node autoGenImageSkill/scripts/gpt_image_cli.js generate \
   --mode proxy \
   --base-url "$GPT_IMAGE_BASE_URL" \
   --api-key "$GPT_IMAGE_API_KEY" \
@@ -129,7 +129,7 @@ node gpt-image-relay/scripts/gpt_image_cli.js generate \
 ### 4.3 购买 / 预留能力
 
 ```bash
-node gpt-image-relay/scripts/gpt_image_cli.js generate \
+node autoGenImageSkill/scripts/gpt_image_cli.js generate \
   --mode reserved \
   --service-url "$GPT_IMAGE_RELAY_URL" \
   --purchase-key "$GPT_IMAGE_PURCHASE_KEY" \
@@ -194,7 +194,7 @@ bash scripts/validate_skill.sh
 ## 8. 项目结构
 
 ```text
-gpt-image-relay/
+autoGenImageSkill/
 ├── SKILL.md
 ├── agents/openai.yaml
 ├── references/access-modes.md

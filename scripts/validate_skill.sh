@@ -2,7 +2,7 @@
 set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-SKILL_DIR="${ROOT_DIR}/gpt-image-relay"
+SKILL_DIR="${ROOT_DIR}/autoGenImageSkill"
 
 ROOT_DIR_ENV="${ROOT_DIR}" python3 - <<'PY'
 from pathlib import Path
@@ -12,7 +12,7 @@ import sys
 import yaml
 
 root = Path(os.environ["ROOT_DIR_ENV"])
-skill_dir = root / "gpt-image-relay"
+skill_dir = root / "autoGenImageSkill"
 skill_md = skill_dir / "SKILL.md"
 agent_yaml = skill_dir / "agents" / "openai.yaml"
 
@@ -29,7 +29,7 @@ def fail(message):
     sys.exit(1)
 
 if not skill_md.is_file():
-    fail("missing gpt-image-relay/SKILL.md")
+    fail("missing autoGenImageSkill/SKILL.md")
 
 source = skill_md.read_text(encoding="utf-8")
 match = re.match(r"^---\n(.*?)\n---\n(.*)$", source, re.S)
@@ -46,10 +46,8 @@ description = frontmatter.get("description")
 version = str(frontmatter.get("version", "")).strip()
 homepage = str(frontmatter.get("homepage", "")).strip()
 
-if name != "gpt-image-relay":
-    fail("frontmatter name must be gpt-image-relay")
-if not re.match(r"^[a-z0-9][a-z0-9-]*$", name or ""):
-    fail("name must be lowercase URL-safe")
+if name != "autoGenImageSkill":
+    fail("frontmatter name must be autoGenImageSkill")
 if not description or len(str(description)) > 512:
     fail("description must be present and concise")
 if not re.match(r"^\d+\.\d+\.\d+$", version):
@@ -75,8 +73,8 @@ if not agent_yaml.is_file():
     fail("missing agents/openai.yaml")
 agent = yaml.safe_load(agent_yaml.read_text(encoding="utf-8"))
 default_prompt = (((agent or {}).get("interface") or {}).get("default_prompt") or "")
-if "$gpt-image-relay" not in default_prompt:
-    fail("agents/openai.yaml default_prompt must mention $gpt-image-relay")
+if "$autoGenImageSkill" not in default_prompt:
+    fail("agents/openai.yaml default_prompt must mention $autoGenImageSkill")
 if ((agent or {}).get("policy") or {}).get("allow_implicit_invocation") is not True:
     fail("agents/openai.yaml should allow implicit invocation")
 
